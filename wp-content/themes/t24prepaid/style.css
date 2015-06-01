@@ -1,0 +1,21 @@
+/*
+Theme Name: T24Prepaid
+Theme URI: https://t24prepaid.com
+Author: Transact24 Prepaid Team
+Author URI: https://t24prepaid.com
+Description: Custom theme for T24Prepaid website
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* these files are part of theme (don't!!! remove) */
+@import url('./css/bootstrap.css');
+@import url('./css/theme.css');
+
+.clearfix{clear:both}section.splash-banner .splash-icon img{opacity:.6}section.splash-banner .bouncing-arrow{cursor:pointer}section.card-features .icon-holder{margin:0 auto 25px}section.card-features .icon-holder i{color:#46a694}section.card-features .content p{text-align:center}section#payout-management-parallax{background-image:url(./img/bg/bg1.jpg)}section.payout-management .icon-holder{background-color:#eee;border:none;border-radius:88px;height:88px;margin:0 auto 50px;width:88px;text-align:center;font-size:24px;color:#46a694;line-height:88px;font-weight:700}section#system-parallax{background-image:url(./img/bg/bg3.jpg)}section#system-parallax .fact{text-align:center}section#system-parallax .fact i{color:#46a694;font-size:86px}section.card-director .container .row{padding-top:40px;padding-bottom:80px}section.card-director .container .row:first-child{padding-top:0!important;padding-bottom:0!important}section.card-director img{width:100%}section.card-director h3.strong.sub-heading{font-size:24px}section.card-director span{color:#46a694;font-weight:700}section.card-director p strong{color:#242526}section.card-director .app-buttons{width:85%;float:right}section.card-director .app-buttons .left{width:49%;float:left}section.card-director .app-buttons .right{width:49%;float:right}section#card-features-parallax{background-image:url(./img/bg/bg4.jpg)}section#our-card-parallax{background-image:url(./img/bg/bg5.jpg)}section#overlay-color .row.contact-options{overflow:hidden;height:auto;max-height:0;float:left;position:relative;width:100%}section#overlay-color #contact-form{margin-top:60px}section#overlay-color #result{margin-bottom:20px}section#overlay-color #contact-form label{text-align:left;height:21px;max-height:21px;color:#333}section#overlay-color #contact-form .form-control{color:#555}section#overlay-color .icon-holder{margin:0 auto}section#overlay-color .icon-holder i{color:#fff;font-size:48px}section#overlay-color h4{text-align:center;margin-top:15px}section.overlay-color .icon-holder{margin:0 auto}section.overlay-color .icon-holder i{color:#fff;font-size:48px}section.overlay-color h4{text-align:center;margin-top:15px}section#map{height:500px}#map-canvas{height:100%;width:100%}footer i{color:#46a694}footer img.logo-footer{width:80%}section.custom-tabs #myTabContent .icon-first{width:auto;height:auto;margin-right:0;margin-top:5px}section.custom-tabs #myTabContent .icon i{color:#46a694}section.custom-tabs #myTabContent p.text{margin-left:60px;position:relative;top:-40px}section.custom-tabs #myTabContent table th{color:#242526;border-top:1px solid #242526;border-bottom:1px solid #242526}section.custom-tabs #five.tab-pane .icon-holder{height:72px;width:100px;margin:0 auto}section.custom-tabs #five.tab-pane h4{text-align:center;margin-top:25px}section.custom-tabs #five.tab-pane p{margin-top:25px;text-align:center}section.overlay-color .row.contact-options{overflow:hidden;height:auto;max-height:0;float:left;position:relative;width:100%}
