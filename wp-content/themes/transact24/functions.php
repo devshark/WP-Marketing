@@ -441,7 +441,7 @@ function remove_page_from_query_string($query_string)
 if (isset($query_string['name']) && $query_string['name'] == 'page' && isset($query_string['page'])) {
 unset($query_string['name']);
 // 'page' in the query_string looks like '/2', so i'm spliting it out
-list($delim, $page_index) = explode ('/', $query_string['page']);
+list($delim, $page_index) = explode('/', $query_string['page']);
 $query_string['paged'] = $page_index;
 }
 return $query_string;
@@ -599,7 +599,17 @@ function get_current_language($code_only = false){
 	}
 	throw new LanguageNotDetectedException('Language code not found!');
 }
-
+/* working code, but not usable because URL slugs per language are different */
+function get_url_by_lang($lang){
+	$link = $_SERVER["REQUEST_URI"];
+	$wp_active_languages = get_active_languages();
+	foreach($wp_active_languages as $key=>$val){
+		$url = str_replace('/'.$key.'/', '/'.$lang.'/', $link);
+		if(strpos($url, '/'.$lang.'/')>0){
+			return $url;
+		}
+	}
+}
 
 /**
  * End of custom functions

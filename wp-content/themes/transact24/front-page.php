@@ -1,4 +1,5 @@
-<?php get_header(); 
+<?php /* Template Name: Front Home Page */
+get_header(); 
 require(get_template_directory() . '/inc/language_map.php');?>
 
 

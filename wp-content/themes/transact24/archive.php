@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Blog pages
  * The template for displaying archive pages
  *
  * Used to display archive-type pages if nothing more specific matches a query.
@@ -70,7 +71,7 @@ require_once get_template_directory() . '/inc/contact_us.php';
 									  $current_page = 1;
 								 // structure of "format" depends on whether we're using pretty permalinks
 								 if( get_option('permalink_structure') ) {
-									 $format = '&paged=%#%';
+									 $format = '?paged=%#%';
 								 } else {
 									 $format = 'page/%#%/';
 								 }

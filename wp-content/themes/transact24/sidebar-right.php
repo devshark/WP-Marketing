@@ -44,7 +44,7 @@ require(get_template_directory() . '/inc/language_map.php');
 				<ul>
 					<?php foreach($category_query as $post):?>
 					<li>
-						<a href="<?php the_permalink();?>"><?php the_title();?>hey</a>
+						<a href="<?php the_permalink();?>"><?php the_title();?></a>
 					</li>
 					<?php endforeach;?>
 				</ul>

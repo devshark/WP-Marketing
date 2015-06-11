@@ -15,11 +15,6 @@
 get_header(); 
 require(get_template_directory() . '/inc/language_map.php');
 ?>
-<?php if(get_the_ID() == LANG_CN || get_the_ID() == LANG_HK): 
-// if the current post is the front page of a specific language
-require_once('front-page.php'); // insert the front-page template
-else: //if not, do the usual post contents ?>
-
 <div class="container marketing" style="padding-bottom:40px;">
     <div id="wrapper">
     <div id="container" class="clear-block">
@@ -54,5 +49,4 @@ else: //if not, do the usual post contents ?>
   </div>
 <!-- /layout -->
 </div>
-<?php endif;?>
 <?php get_footer(); ?>

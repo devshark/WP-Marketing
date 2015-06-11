@@ -89,7 +89,7 @@ require_once(get_template_directory() . '/inc/language_map.php');
                   <ul>
                     <?php 
                     foreach($wp_active_languages as $data){ ?>
-                  	   <li><a onclick="ga('send','event','Page-Header','Click','Languages/<?php echo $data['name'];?>');" href="/<?php echo $data['path']; ?>" target="_self"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/<?php echo $data['image']; ?>">  <?php echo $data['name']; ?></a></li>
+                  	   <li><a onclick="ga('send','event','Page-Header','Click','Languages/<?php echo $data['name'];?>');" href="/<?php echo $data['path'];?>" target="_self"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/<?php echo $data['image']; ?>">  <?php echo $data['name']; ?></a></li>
                     <?php } ?>
                     </ul>
                     </li>

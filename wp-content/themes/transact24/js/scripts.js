@@ -73,7 +73,6 @@ if (!hash.length <= 0) {
 			if(u.length>1){
 				a = u[1].split('"');
 			}
-			var a = u[1].split('"');
 			var f = $('channel item', xml).first().find('category').html();
 			var l = $('channel item', xml).first().find('title').html();
 			var c = $('channel item', xml).first().find('link').html();
@@ -95,7 +94,6 @@ if (!hash.length <= 0) {
 					if(g.length>1){
 						y = g[1].split('"');
 					}
-					var y = g[1].split('"');
 					$("#blog-news-" + id + " .blog-img-holder").attr("style", "background:url(" + y[0] + ")");
 					var b = $('pubDate', value).text();
 					var w = b.split(" ");
