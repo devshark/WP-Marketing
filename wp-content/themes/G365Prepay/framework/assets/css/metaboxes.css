@@ -1,0 +1,39 @@
+.eva-metaboxes th span {
+    display: block;
+    margin-top: 5px;
+    color: #B9B9B9;
+}
+.eva-metaboxes input[type="text"], .eva-metaboxes textarea {
+    width: 75%;
+    margin-right: 20px;
+}
+.gallery-thumbs li {
+    float: left;
+    margin-right: 10px;
+}
+.eva-metaboxes .type_layout a {
+    text-indent: -9999px;
+    height: 40px;
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+    background: url(../images/sidebar_bg.jpg) no-repeat;
+}
+.type_layout a.left-sidebar {
+    background-position: 0 0;
+}
+.type_layout a.without-sidebar {
+    background-position: -260px 0;
+}
+.type_layout a.right-sidebar {
+    background-position: -520px 0;
+}
+.type_layout .left-sidebar.active {
+    background-position: 0 -40px;
+}
+.type_layout .without-sidebar.active {
+    background-position: -260px -40px;
+}
+.type_layout .right-sidebar.active {
+    background-position: -520px -40px;
+}
