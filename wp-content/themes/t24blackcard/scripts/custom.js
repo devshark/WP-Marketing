@@ -226,141 +226,91 @@ $(window).scroll(function() {
       
                 var error_color   = '#990000'; //text color of the error messages
                 var default_color = '#7E7E7E'; //default text color of the contact form
-      
-                $('input#form-name').click(function() {
-      
-                           var form_name = $('input#form-name').val();
-            
-                           if (form_name == missing_name)
-                              {
-                              $('input#form-name').css("color" , default_color);
-                              $('input#form-name').val('');
-                              }
-                              else if (form_name == name_value)
-                                      {
-                                      $('input#form-name').val('');
-                                      $('input#form-name').css("color" , default_color);
-                                      }
-      
-                });
-      
-                $('input#form-mail').click(function() {
-      
-                           var form_mail = $('input#form-mail').val();
-            
-                           if (form_mail == missing_mail || form_mail == invalid_mail)
-                           {
-                           $('input#form-mail').css("color" , default_color);
-                           $('input#form-mail').val('');
-                           }
-                           else if (form_mail == mail_value)
-                                   {
-                                   $('input#form-mail').val('');
-                                   $('input#form-mail').css("color" , default_color);
-                                   }
-      
-                });
-           
-                $('input#form-subject').click(function() {
-      
-                           var form_subject = $('input#form-subject').val();
-            
-                           if (form_subject == missing_subject)
-                           {
-                           $('input#form-subject').css("color" , default_color);
-                           $('input#form-subject').val('');
-                           }
-                           else if (form_subject == subject_value)
-                                   {
-                                   $('input#form-subject').val('');
-                                   $('input#form-subject').css("color" , default_color);
-                                   }
-      
-                });
-      
-                $('textarea#form-message').click(function() {
-      
-                           var message_content = $('textarea#form-message').val();
-            
-                           if (message_content == missing_message || message_content == message_value)
-                              {
-                              $('textarea#form-message').css("color" , default_color);
-                              $('textarea#form-message').val('');
-                              }
-                });
-      
-                $('#contact-form button#button').click(function() {
-      
-                           var name = $('input#form-name').val();
-                           var email = $('input#form-mail').val();
-                           var subject = $('input#form-subject').val();
-                           var comments = $('textarea#form-message').val();
-            
-                           if (name == "" || name == missing_name || name == name_value)
-                              {
-                              $('input#form-name').css("color" , error_color);
-                              $('input#form-name').val(missing_name);
-                              }
-            
-                           if (email == "" || email == invalid_mail || email == mail_value)
-                              {
-                              $('input#form-mail').css("color" , error_color);
-                              $('input#form-mail').val(missing_mail);
-                              }
-                              
-                           if (email != mail_value && email != missing_mail ) {
-                              var atpos=email.indexOf("@");
-                              var dotpos=email.lastIndexOf(".");
-                              if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
-                                 {
-                                 $('input#form-mail').css("color" , error_color);
-                                 $('input#form-mail').val(invalid_mail);
-                                 return false;
-                                 }
-                           }
-                           
-                           if (subject == "" || subject == missing_subject || subject == subject_value)
-                              {
-                              $('input#form-subject').css("color" , error_color);
-                              $('input#form-subject').val(missing_subject);
-                              }
-            
-                           if (comments == "" || comments == message_value || comments == missing_message)
-                              {
-                              $('textarea#form-message').css("color" , error_color);
-                              $('textarea#form-message').val(missing_message);
-                              }
-            
-                           if ( name == "" || name == missing_name || name == name_value || email == "" || email == invalid_mail || email == mail_value || email == missing_mail || comments == "" || comments == message_value || comments == missing_message || subject == "" || subject == missing_subject || subject == subject_value ) { return false; }
-            
-                           var atpos=email.indexOf("@");
-                           var dotpos=email.lastIndexOf(".");
-                           if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
-                              {
-                              $('input#form-mail').css("color" , error_color);
-                              $('input#form-mail').val(invalid_mail);
-                              return false;
-                              }
-            
-                           $("div#contact-form input[type='text']").remove();
-                           $('div#contact-form textarea').remove();
-                           $('div#contact-form button').remove();
-                           $('p#required').remove();
-                           $('div#result').append('<div id="contact-loading"></div>');
-            
-                           $.ajax({
-                                     type: 'post',
-                                     url: window.template_uri + 'mail.php',
-                                     data: 'name=' + name + '&email=' + email + '&subject=' + subject + '&comments=' + comments,
-            
-                                     success: function(results) {
-                                               $('div#contact-loading').remove();
-                                               $('div#result').html(results);
-                                     }
-                           });
-      
-                });//send click process ends here
+				var success_color = '#000'; //black text color for success message text
 
+
+		$('#contact-form form#contact-us').submit(
+			function(event){
+				event.preventDefault();
+				var $this = $(this);
+
+				var name = $('input#form-name').val();
+				var email = $('input#form-mail').val();
+				var subject = $('input#form-subject').val();
+				var comments = $('textarea#form-message').val();
+
+				if (name.trim() === '')
+				  {
+					$('input#form-name', $this).css("color" , error_color);
+					$('div#result', $this).html(missing_name).css("color" , error_color);
+					 return false;
+				  }
+				else{
+					$('input#form-name', $this).css("color" , default_color);
+					$('div#result', $this).empty();
+				}
+
+				if (email.trim() === '')
+				  {
+				  $('input#form-mail', $this).css("color" , error_color);
+					 $('div#result', $this).html(invalid_mail).css("color" , error_color);
+					 return false;
+				  }
+				else{
+                    var atpos=email.indexOf("@");
+                    var dotpos=email.lastIndexOf(".");
+                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+					{
+                        $('input#form-mail', $this).css("color" , error_color);
+                        $('div#result', $this).html(invalid_mail).css("color" , error_color);
+                        return false;
+					}
+				    else{
+						$('input#form-mail', $this).css("color" , default_color);
+						$('div#result', $this).empty();
+					}
+				}
+				if (subject.trim() === '')
+				{
+				$('input#form-subject', $this).css("color" , error_color);
+					$('div#result', $this).html(missing_subject).css("color" , error_color);
+					return false;
+				}
+				else{
+					$('input#form-subject', $this).css("color" , default_color);
+					$('div#result', $this).empty();
+				}
+				if (comments.trim() === '')
+				{
+				    $('textarea#form-message', $this).css("color" , error_color);
+					$('div#result', $this).html(missing_message).css("color" , error_color);
+					return false;
+				}
+				else{
+					$('input#form-message', $this).css("color" , default_color);
+					$('div#result', $this).empty();
+				}
+			   $('div#result').append('<div id="contact-loading"></div>').css('height','55px');
+				$.ajax({
+					'url': window.template_uri + 'contact_us.php',
+					'type': 'POST',
+					'dataType': 'json',
+					'data': $this.serialize(),
+					'success': function(result){
+						if(result.hasOwnProperty('status')){
+							if(result.status == 200){
+							    $('div#contact-loading').remove();
+								$('input[type=text], textarea', $this).val("");
+								$('#result', $this).html('Thank you for contacting us. We\'ll be in touch shortly.').css({'color':success_color,'height':'auto'});
+							}else if(result.status == 500){
+								//error sending message.
+							}else if(result.status == 404){
+								$('#result', $this).html('Missing required fields!');
+							}
+						}
+					}// END: Success method
+				});// END: Ajax
+		}); //END contact form send
       });  //END: document.ready()
 
 

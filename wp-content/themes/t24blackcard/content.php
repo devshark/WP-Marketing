@@ -9,10 +9,6 @@
  * @since Twenty Fifteen 1.0
  */
 ?>
-<?php if(is_single()): ?>
-</div><!--CONTENT-->
-</div><!--HOME-->
-<?php endif;?>
 
 <div  id="post-<?php the_ID(); ?>" class="slide" data-color="black">
 	<div class="overlay white"></div>

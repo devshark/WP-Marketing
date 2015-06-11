@@ -12,7 +12,19 @@
  */
 
 get_header(); ?>
-
+	<style>
+		#card-fees{padding-top:50px;}
+		.home1{padding-bottom:0px;padding-top:30px !important;}
+		@media screen 
+		and (min-width: 1200px){
+			#header{margin-bottom:20px; padding-bottom:0px;}
+		}
+		@media screen 
+		and (min-width: 320px) 
+		and (max-width: 1024px){
+			#header{margin-bottom:20px; padding-bottom:20px;}
+		}
+	</style>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

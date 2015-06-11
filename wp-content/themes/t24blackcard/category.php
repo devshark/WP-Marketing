@@ -14,6 +14,7 @@ get_header(); ?>
 	<div class="overlay white"></div>
 	<section id="content">
 		<section id="middle">
+			<h2>Category: <?php the_category();?></h2>
 			<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/style/blog.css';?>" />
 			<?php
 			// Start the Loop.

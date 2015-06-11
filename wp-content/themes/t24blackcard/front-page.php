@@ -62,13 +62,10 @@
      	<div class="section_intro">
           	<p>The T24 Black Visa Prepaid card comes complete with a load limit of up to USD 50,000*, complimentary travel benefits of Priority Pass membership and premium travel insurance, and a full-featured range of web-based and mobile cardholder services</p>
      	</div>
-     
+
      	<div id="features-wrapper">
 			<div id="left-features">
             
-            	
-				
-                
                 <div class="feature wow slideInLeft">
             		<!--<div class="feature-circle">
                          <i class="fa fa-upload"></i>
@@ -813,7 +810,7 @@
     </div>
 </div>
 
-<div id="quote" class="slide" data-color="white" data-stellar-background-ratio="0.5" style="background:url(<?php echo esc_url( get_template_directory_uri() ); ?>/images/fees-bg.jpg);">
+<div id="quote" class="slide" data-color="white" data-stellar-background-ratio="0.5" style="background:url('/wp-content/uploads/sites/8/2015/06/faq-bg.jpg');">
 	<div class="overlay"></div>
     
     <div class="border-top"></div>
@@ -1115,76 +1112,6 @@
 
 <div class="separator-line"></div>
 
-<!-- CONTACT -->
-<div id="contact" class="slide" data-color="black">
-<div id="map-canvas"></div>
-
-     <!-- Title -->
-     <div class="section_title" style="position: relative; z-index: 9;">
-          <h2>CONTACT US</h2>
-          <div class="title_border"></div>
-     </div>
-     
-     <!-- Section Intro ( Uncomment to show )
-     <div class="section_intro">
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor sollicitudin ligula, 
-          imperdiet pulvinar nibh fringilla non. Integer odio metus, sollicitudin sed neque eu, 
-          feugiat aliquam tortor.
-          </p>
-     </div>
-     -->
-
-     <!-- Contact form -->
-     <div id="contact-form">
-     
-     <div class="one_third" style="position: relative; z-index: 9;">
-     	<div style="width: 32px; margin: 0 auto;"><i class="fa fa-map-marker" style="color: #46a694; font-size: 56px;"></i></div>
-        <h2 style="margin-bottom: 32px; margin-top: 32px; font-size: 18px; font-weight: 400; text-align: center; color: #000;">3rd floor, Heritage House,<br> 235 Main Street,<br> Gibraltar</h2>
-     </div>
-     <div class="one_third" style="position: relative; z-index: 9;">
-     	<div style="width: 32px; margin: 0 auto;"><i class="fa fa-phone" style="color: #46a694; font-size: 56px;"></i></div>
-        <h2 style="margin-bottom: 32px; margin-top: 32px; font-size: 18px; font-weight: 400; text-align: center; color: #000;">+44 (0)20 7281 6090</h2>
-     </div>
-     <div class="one_third_last" style="position: relative; z-index: 9;">
-     	<div style="width: 32px; margin: 0 auto;"><i class="fa fa-envelope" style="color: #46a694; font-size: 56px;"></i></div>
-        <h2 style="margin-bottom: 32px; margin-top: 32px; font-size: 18px; font-weight: 400; text-align: center; color: #000;">support@t24blackcard.com</h2>
-     </div>
-     
-     <div class="clear"></div>
-          
-          <div class="one_third" style="position: relative; z-index: 9; margin-bottom: 0 !important;">
-          <input type="text" name="name" value="Name *" id="form-name" class="wow fadeInLeft" style="width: 100%;" />
-          </div>
-          
-          <div class="one_third" style="position: relative; z-index: 9; margin-bottom: 0 !important;">
-          <input type="text" name="mail" value="Email *" id="form-mail" class="wow fadeIn" style="width: 100%;" />
-          </div>
-          
-          <div class="one_third_last" style="position: relative; z-index: 9; margin-bottom: 0 !important;">
-          <input type="text" name="mail" value="Subject *" id="form-subject" class="wow fadeInRight" style="width: 100%;" /> 
-          </div>
-          
-          <div class="clear"></div>
-             
-          <!-- Message (textarea) -->
-          <textarea name='message' rows="5" cols="62" id="form-message" class="wow fadeIn">Message *</textarea>
-                     
-          <!-- Button -->
-          <p>
-          <button type="submit" id="button" class="wow fadeInUp">SEND MESSAGE</button>
-          </p>
-
-          <p id="required">
-          * Required fields!
-          </p>
-               
-          <!--container for the results of mail.php-->
-          <div id="result"></div>		
-     <div class="clear"></div>
-     </div>
-
-</div>
-<!-- END: CONTACT -->
+<?php get_template_part('contact', 'page');?>
 
 <?php get_footer(); ?>

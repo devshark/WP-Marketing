@@ -3,7 +3,7 @@
 
 
 
-<div style="width: 40%; float: right; margin-top: 30px;"><div style="width: 65%; margin: 0 auto;"><img src="<?php echo $_GET['root'] ?: '';?>/images/mobilescreens.png" style="width: 100%;"></div></div>
+<div style="width: 40%; float: right; margin-top: 30px;"><div style="width: 65%; margin: 0 auto;"><img src="<?php echo $_GET['root'] ?: '';?>/images/mobilescreens_prepaid365.png" style="width: 100%;"></div></div>
 
 <div style="width: 60%; float: left; margin-top: 30px;">
 <p style="color: #7f7f7f; line-height: 170%;">Our T24 Prepaid app is an extension to our web-based cardholder services, giving our cardholders a quicker, secure way of accessing their accounts on the go, from their mobile devices.</p>

@@ -1,0 +1,27 @@
+.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset{
+	width:50%;
+}
+.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset input[type=text]{
+	width:100%;
+}
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow{
+	width:50%;
+}
+img#img-search{
+	margin:0 auto;
+}
+::-webkit-input-placeholder {
+   color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}

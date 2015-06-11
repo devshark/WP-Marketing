@@ -309,6 +309,117 @@ function twentyfifteen_search_form_modify( $html ) {
 }
 //add_filter( 'get_search_form', 'twentyfifteen_search_form_modify' );
 
+/*
+Plugin Name: Category pagination fix
+Plugin URI: http://www.htmlremix.com/projects/category-pagination-wordpress-plugin
+Description: Fixes 404 page error in pagination of category page while using custom permalink
+Version: 2.0
+Author: Remiz Rahnas
+Author URI: http://www.htmlremix.com
+
+Copyright 2009 Creative common (email: mail@htmlremix.com)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You are allowed to use, change and redistibute without any legal issues. I am not responsible for any damage caused by this program. Use at your own risk
+Tested with WordPress 2.7, 2.8.4 only. Works with wp-pagenavi
+*/
+
+/**
+* This plugin will fix the problem where next/previous of page number buttons are broken on list
+* of posts in a category when the custom permalink string is:
+* /%category%/%postname%/
+* The problem is that with a url like this:
+* /categoryname/page/2
+* the 'page' looks like a post name, not the keyword "page"
+*/
+function remove_page_from_query_string($query_string)
+{
+if (isset($query_string['name']) && $query_string['name'] == 'page' && isset($query_string['page'])) {
+unset($query_string['name']);
+// 'page' in the query_string looks like '/2', so i'm spliting it out
+list($delim, $page_index) = explode ('/', $query_string['page']);
+$query_string['paged'] = $page_index;
+}
+return $query_string;
+}
+// I will kill you if you remove this. I died two days for this line
+add_filter('request', 'remove_page_from_query_string');
+
+function wpse_allowedtags() {
+    // Add custom tags to this string
+        return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>'; 
+    }
+
+if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) : 
+
+    function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
+    global $post;
+    $raw_excerpt = $wpse_excerpt;
+        if ( '' == $wpse_excerpt ) {
+
+            $wpse_excerpt = get_the_content('');
+            $wpse_excerpt = strip_shortcodes( $wpse_excerpt );
+            $wpse_excerpt = apply_filters('the_content', $wpse_excerpt);
+            $wpse_excerpt = str_replace(']]>', ']]&gt;', $wpse_excerpt);
+            $wpse_excerpt = strip_tags($wpse_excerpt, wpse_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
+
+            //Set the excerpt word count and only break after sentence is complete.
+                $excerpt_word_count = 75;
+                $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count); 
+                $tokens = array();
+                $excerptOutput = '';
+                $count = 0;
+
+                // Divide the string into tokens; HTML tags, or words, followed by any whitespace
+                preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $wpse_excerpt, $tokens);
+
+                foreach ($tokens[0] as $token) { 
+
+                    if ($count >= $excerpt_word_count && preg_match('/[\,\;\?\.\!]\s*$/uS', $token)) { 
+                    // Limit reached, continue until , ; ? . or ! occur at the end
+                        $excerptOutput .= trim($token);
+                        break;
+                    }
+
+                    // Add words to complete sentence
+                    $count++;
+
+                    // Append what's left of the token
+                    $excerptOutput .= $token;
+                }
+
+            $wpse_excerpt = trim(force_balance_tags($excerptOutput));
+
+                $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more about: %s &nbsp;&raquo;', 'wpse' ), get_the_title()) . '</a>'; 
+                $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
+
+                //$pos = strrpos($wpse_excerpt, '</');
+                //if ($pos !== false)
+                // Inside last HTML tag
+                //$wpse_excerpt = substr_replace($wpse_excerpt, $excerpt_end, $pos, 0); /* Add read more next to last word */
+                //else
+                // After the content
+                $wpse_excerpt .= $excerpt_end; /*Add read more in new paragraph */
+
+            return $wpse_excerpt;   
+
+        }
+        return apply_filters('wpse_custom_wp_trim_excerpt', $wpse_excerpt, $raw_excerpt);
+    }
+
+endif; 
+
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt');
 /**
  * Implement the Custom Header feature.
  *

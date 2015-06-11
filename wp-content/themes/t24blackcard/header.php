@@ -47,7 +47,10 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style/jquery-ui.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style/style.css" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style/perfect-icons.css" />
+	<?php if ( ! is_home()){ ?>
+	<link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style/non-home.css" />
+	<?php } ?>
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -75,7 +78,7 @@
 
 
 <!-- HOME -->
-<div id="home" class="home1" data-stellar-background-ratio="0.5">
+<div id="home" class="home1" data-stellar-background-ratio="0.5" style="background-image:url(/wp-content/uploads/sites/8/2015/06/header-bg.jpg);">
 	<div class="overlay"></div>
      <!-- Content -->
      <div id="home_content" class="slide" data-color="white">

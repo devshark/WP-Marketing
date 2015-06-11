@@ -9,8 +9,7 @@
 ?>
 </div><!--CONTENT-->
 </div><!--HOME-->
-
-<div id="card-fees" class="slide" data-color="black">
+<div id="<?php echo get_field('id'); ?>" class="<?php echo get_field('class'); ?>" data-color="black">
 	<div class="overlay white"></div>
 	<div class="section_title">
           <h2><?php the_title();?></h2>
@@ -21,10 +20,6 @@
 			<?php echo get_field('section_intro'); ?>
 		</p>
 	</div>
-    <div id="features-wrapper">
-		<div class="wow fadeIn">
-			<?php the_content(); ?>
-			<div class="clear"></div>
-		</div>
+	<?php the_content(); ?>
 	</div>
 </div>

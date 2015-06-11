@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The template for displaying all single posts and attachments
  *
  * @package WordPress
  * @subpackage Twenty_Fifteen
@@ -9,22 +9,22 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+</div><!--CONTENT-->
+<section id="body" class="slide" data-color="black">
+	<div class="overlay white"></div>
+	<section id="content">
+		<section id="middle">
+			<article>
+				<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/style/blog.css';?>" />
+				<h2><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h2>
+				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
-
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
-
+				<?php get_search_form(); ?>
+			</article>
+		</section>
+		<?php get_sidebar('right');?>
+		<div class="clear clearfix"></div>
+	</section>
+</section>
+</div><!--home-->
 <?php get_footer(); ?>
