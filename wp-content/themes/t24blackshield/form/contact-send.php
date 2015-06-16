@@ -4,7 +4,7 @@
  $subject = htmlspecialchars($_POST['subject'], ENT_QUOTES);
  $textbox = htmlspecialchars($_POST['message'], ENT_QUOTES);
  $telephone = htmlspecialchars($_POST['telephone'], ENT_QUOTES);
- $to ='support@t24blackshield.com';
+ $to ='support'+'@'+'t24blackshield.com';
  
  
 

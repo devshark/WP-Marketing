@@ -887,3 +887,6 @@ nav#footer-nav ul li {
 	display: inline-block; margin-right: 15px; float: left;
 }
 
+p.copyright {
+    float:left;
+}

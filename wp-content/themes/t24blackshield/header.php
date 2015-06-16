@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 	<title>T24 BlackShield Visa Prepaid Card – Travel Protection Membership Program</title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/normalize.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/style.css" type="text/css" media="screen">
@@ -19,7 +19,7 @@
     
     <link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/settings.css">
     
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">
         
 
 	<!-- <link rel="stylesheet" href="css/style.min.css" type="text/css" media="screen"> -->

@@ -1,5 +1,7 @@
-<?php get_header(); ?>
-
+<?php 
+/* Template Name: English Front Page */
+get_header(); 
+?>
 
 <div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
 	<div id="banner" class="tp-banner-container section">
@@ -441,7 +443,7 @@
 			<p>Triton Global Claims (Asia) Pte Ltd</p>
 			<p>8 Cross St, Level 28 PWC Building, Singapore 048424</p>
 			<p><span>Claim Line</span>: 400 1205 978 (China) 800 930 255 (Hong Kong) +65 6850 7636 (Singapore)    </p>
-			<p><span>Email</span>:<a href="mailto:T24.Claims@triton-global.com">T24.Claims@triton-global.com</a></p>
+			<p><span>Email</span>:<a href="mailto:T24.Claims&#064;triton-global.com">T24.Claims&#064;triton-global.com</a></p>
 			<p><span>Website</span>: <a href="http://www.triton-global.com/claims/notifications/asia/" rel="nofollow" target="_blank">Click here</a></p>
 			<h3><a href="<?php echo esc_url( get_template_directory_uri() ); ?>/download/T24 BLACKSHIELD MASTER POLICY ENGLISH.PDF" target="_blank">VIEW THE FULL POLICY</a></h3>
 			<p><span>Disclaimer</span>: Please note that the Chinese Master Policy is translated from the English Master Policy. In the case of any dispute, the English Master Policy is the final version.</p>
@@ -453,7 +455,7 @@
 			<p>Coloured high definition scanned image of Applicant’s Proof of Address. (Utility bill, bank statement, credit card statement)</p>
 			<p>* Mobile phone bills not accepted.</p>
 			<p>Administration and Postage Fees apply. Please contact your Agent in your country of such fees.</p>
-			<p>Please send items 1 & 2 to <a href="mailto:support@t24blackshield.com">support@t24blackshield.com</a></p>
+			<p>Please send items 1 & 2 to <a href="mailto:support&#064;t24blackshield.com">support&#064;t24blackshield.com</a></p>
 		</div>
 	</div>
 </div>
@@ -631,7 +633,7 @@
 		<div id="content" class="grid_12">
 			<header>
             	<h2 class="center-text">Card Fee Highlights</h2>
-                <p class="center-text" style="font-size: 20px;">This Fee Summary shows you the main fees and limits of the T24 BlackShield Card. Download a full <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/download/T24%20Carholder%20Agreement%20Blackshield%20Nov%202013-fees.pdf" target="_blank">Fee Schedule</a> or complete the <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/download/T24%20Carholder%20Agreement%20Blackshield%20Nov%202013.pdf" target="_blank">Terms and Conditions</a></p>
+                <p class="center-text" style="font-size: 20px;">This Fee Summary shows you the main fees and limits of the T24 BlackShield Card. Download a full <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/download/T24%20Carholder%20Agreement%20Blackshield%20Nov%202013-fees.pdf" target="_blank">Fee Schedule</a> or complete the <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/download/T24%20Carholder%20Agreement%20Blackshield%20June%202015.pdf" target="_blank">Terms and Conditions</a></p>
                 <div class="dotdotdot center-text">..........</div>
 			</header>
 			<table>
@@ -794,7 +796,7 @@
 					</div>
 					<div class="faq-question">
 						<h4>What are the fees and terms and conditions?<span><i class="fa fa-caret-down"></i></span></span></h4>
-						<p class="faq-answer">Read the full Terms and Conditions here: <a href="download/T24%20Carholder%20Agreement%20Blackshield%20Nov%202013.pdf" target="_blank">Terms and Conditions</a></p>
+						<p class="faq-answer">Read the full Terms and Conditions here: <a href="<?php echo esc_url( get_template_directory_uri() ); ?>/download/T24%20Carholder%20Agreement%20Blackshield%20June%202015.pdf" target="_blank">Terms and Conditions</a></p>
 					</div>
 					<div class="faq-question">
 						<h4>Do the cards have an expiry date?<span><i class="fa fa-caret-down"></i></span></span></h4>
@@ -867,9 +869,9 @@
        				<div class="grid_4 omega">
 						<h4>Main Office:</h4>
 							<address>
-								<span><span>Address</span>: Transact24 Limited, 3rd floor, Heritage House, 235 Main Street, Gibraltar</span><br>
+								<span><span>Address</span>: Transact24 Limited, 8A Pitmans Alley, Main Street, Gibraltar</span><br>
 								<span><span>Phone</span>: +44 20 7281 3033</span><br>
-								<span><span>Email</span>: <a href="mailto:support@t24blackshield.com">support@t24blackshield.com</a></span>
+								<span><span>Email</span>: <a href="mailto:support&#064;t24blackshield.com">support&#064;t24blackshield.com</a></span>
 							</address>
 							<br>
             				<br>
@@ -879,7 +881,7 @@
             				<br>
 							<address>
             				<span><span>Address</span>: Unit 2801, Wu Chung House, 213 Queen's Road East, Wan Chai, Hong Kong</span><br>
-            				<span><span>Email</span>: <a href="mailto:support@t24canaan.com">support@t24canaan.com</a> or <a href="mailto:insurance@canaan.sg">insurance@canaan.sg</a></span>
+            				<span><span>Email</span>: <a href="mailto:support&#064;t24canaan.com">support&#064;t24canaan.com</a> or <a href="mailto:insurance&#064;canaan.sg">support&#064;t24canaan.com</a></span>
             				</address>
 						</div>
 					</div>
@@ -889,18 +891,18 @@
                         
 <div class="slide12wrapper">
 	<div class="slide gray" id="slide12" data-slide="12" data-stellar-background-ratio="0.5" style="padding: 40px 0;">
-	<div class="container clearfix">
-		<div id="content" class="grid_12"> 
-        	<div class="grid_9">
-            	<h2>The T24 BlackShield membership delivers a complete solution for individuals looking for comprehensive travel protection</h2>
-                <p style="font-size: 20px;">When our members travel internationally, they enjoy several complimentary products and services</p>
-			</div>
-			<div class="grid_3 omega">
-				<a class="button medium green" data-slide="11"><i class="fa fa-envelope"></i> Contact Us</a>
-				<a class="button medium green" data-slide="2"><i class="fa fa-question-circle"></i> Learn More</a>
+		<div class="container clearfix">
+			<div id="content" class="grid_12"> 
+				<div class="grid_9">
+					<h2>The T24 BlackShield membership delivers a complete solution for individuals looking for comprehensive travel protection</h2>
+					<p style="font-size: 20px;">When our members travel internationally, they enjoy several complimentary products and services</p>
+				</div>
+				<div class="grid_3 omega">
+					<a class="button medium green" data-slide="11"><i class="fa fa-envelope"></i> Contact Us</a>
+					<a class="button medium green" data-slide="2"><i class="fa fa-question-circle"></i> Learn More</a>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 <?php get_footer(); ?>
