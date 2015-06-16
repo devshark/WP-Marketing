@@ -45,7 +45,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body class="with-preloader">
-		
+
 <?php require get_template_directory() . '/language_post_reference.php'; ?>
 
 <?php if ( (is_front_page() && is_home()) || in_array($post->ID, $language_post_en) ) : //list of postID to show this section ?>
@@ -92,12 +92,16 @@
 						
 						<!-- NAVIGATION LINKS -->
 						<ul class="nav navbar-nav navbar-right">
-                        	<li><a onClick="$('html, body').animate({scrollTop : 0},800);" style="cursor: pointer;">home</a></li>
-							<li><a href="#features">Features</a></li>
-							<li><a href="#fees">Fees</a></li>
-                            <li><a href="#offers">Merchant Offers</a></li>
-							<li><a href="#faqs">FAQs</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
+							<?php if(is_front_page()){ ?>
+                        	<li><a onClick="$('html, body').animate({scrollTop : 0},800);" style="cursor: pointer;">Home</a></li>
+                        	<?php }else{ ?>
+                        	<li><a href="/" style="cursor: pointer;">主页</a></li>
+                        	<?php } ?>
+							<li><a href="/#features">Features</a></li>
+							<li><a href="/#fees">Fees</a></li>
+                            <li><a href="/#offers">Merchant Offers</a></li>
+							<li><a href="/#faqs">FAQs</a></li>
+                            <li><a href="/#contact">Contact Us</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">English</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/zh_cn' ) ); ?>">简体</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/zh_hk' ) ); ?>">繁體</a></li>
@@ -151,12 +155,16 @@
 						
 						<!-- NAVIGATION LINKS -->
 						<ul class="nav navbar-nav navbar-right">
+							<?php if($post->ID===17){?>
                         	<li><a onClick="$('html, body').animate({scrollTop : 0},800);" style="cursor: pointer;">主页</a></li>
-							<li><a href="#features">特点</a></li>
-							<li><a href="#fees">费用</a></li>
-                            <li><a href="#offers">商户优惠</a></li>
-							<li><a href="#faqs">常见问题</a></li>
-                            <li><a href="#contact">联系我们</a></li>
+                        	<?php }else{ ?>
+                        	<li><a href="/zh_cn/" style="cursor: pointer;">主页</a></li>
+                        	<?php } ?>
+							<li><a href="/zh_cn/#features">特点</a></li>
+							<li><a href="/zh_cn/#fees">费用</a></li>
+                            <li><a href="/zh_cn/#offers">商户优惠</a></li>
+							<li><a href="/zh_cn/#faqs">常见问题</a></li>
+                            <li><a href="/zh_cn/#contact">联系我们</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">English</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/zh_cn' ) ); ?>">简体</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/zh_hk' ) ); ?>">繁體</a></li>
@@ -211,12 +219,16 @@
 						
 						<!-- NAVIGATION LINKS -->
 						<ul class="nav navbar-nav navbar-right">
+							<?php if($post->ID===19){?>
                         	<li><a onClick="$('html, body').animate({scrollTop : 0},800);" style="cursor: pointer;">主頁</a></li>
-							<li><a href="#features">特點</a></li>
-							<li><a href="#fees">費用</a></li>
-                            <li><a href="#offers">商戶優惠</a></li>
-							<li><a href="#faqs">常見問題</a></li>
-                            <li><a href="#contact">聯繫我們</a></li>
+                        	<?php }else{ ?>
+                        	<li><a href="/zh_hk/" style="cursor: pointer;">主頁</a></li>
+                        	<?php } ?>
+							<li><a href="/zh_hk/#features">特點</a></li>
+							<li><a href="/zh_hk/#fees">費用</a></li>
+                            <li><a href="/zh_hk/#offers">商戶優惠</a></li>
+							<li><a href="/zh_hk/#faqs">常見問題</a></li>
+                            <li><a href="/zh_hk/#contact">聯繫我們</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">English</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/zh_cn' ) ); ?>">简体</a></li>
                             <li class="language-option"><a href="<?php echo esc_url( home_url( '/zh_hk' ) ); ?>">繁體</a></li>

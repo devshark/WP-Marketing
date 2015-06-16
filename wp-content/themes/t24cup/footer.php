@@ -174,6 +174,7 @@
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/wow.min.js"></script>
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.nav.min.js"></script>
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.stellar.min.js"></script>
+		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/nivo-lightbox.min.js"></script>
 		<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/script.js"></script>
 
 <script>
