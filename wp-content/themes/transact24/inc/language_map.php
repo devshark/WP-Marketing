@@ -92,6 +92,10 @@ try{
 	$block_about_t24->addExplicit(209, LANG_CN);
 	$block_about_t24->addExplicit(207, LANG_HK);
 	
+	$page_from_our_md = new PostLanguagePair( new PostLanguageMapper(124 , LANG_EN) );
+	$page_from_our_md->addExplicit(147, LANG_CN);
+	$page_from_our_md->addExplicit(145, LANG_HK);
+
 	$page_copyright = new PostLanguagePair( new PostLanguageMapper(43 , LANG_EN) );
 	$page_copyright->addExplicit(47, LANG_CN);
 	$page_copyright->addExplicit(45, LANG_HK);

@@ -69,6 +69,9 @@ require(get_template_directory() . '/inc/language_map.php');
 		window.template_uri = '<?php print esc_url( get_template_directory_uri() ); ?>';
 		window.home_url = '<?php echo esc_url( home_url('/'));?>';
 		window.current_language = '<?php echo $_CODE;?>';
+		if(typeof window.is_front === 'undefined'){
+			window.is_front = false;
+		}
     </script>
 	<script src="<?php print esc_url( get_template_directory_uri() ); ?>/js/i18n.js"></script>
     <script src="<?php print esc_url( get_template_directory_uri() ); ?>/assets/js/jquery.js"></script>

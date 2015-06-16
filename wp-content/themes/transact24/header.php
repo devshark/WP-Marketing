@@ -118,9 +118,8 @@ require_once(get_template_directory() . '/inc/language_map.php');
             </div><!--navbar-header-->
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a onclick="ga('send','event','Menu','Click','Home');" href="#"><?php echo $i18n_arr['header']['menu_home']; ?></a></li>
-                <li><a onclick="ga('send','event','Menu','Click','About');" href="#about" id="menu_about"><?php echo $i18n_arr['header']['menu_about']; ?></a></li>
-                <li><a onclick="ga('send','event','Menu','Click','Contact');" href="#contact" id="cta-btn"><?php echo $i18n_arr['header']['menu_contact']; ?></a></li>
+                <li><a onclick="ga('send','event','Menu','Click','Home');" href="<?php echo esc_url( home_url( '/'.$current_language_option['path'].'#' ) ); ?>"><?php echo $i18n_arr['header']['menu_home']; ?></a></li>
+                <li><a onclick="ga('send','event','Menu','Click','About');" href="<?php echo esc_url( home_url( '/'.$current_language_option['path'].'#about' ) ); ?>" id="menu_about"><?php echo $i18n_arr['header']['menu_about']; ?></a></li>
                 <li class="dropdown">
                   <a href="#" onclick="ga('send','event','Menu','Click','Solutions');" class="dropdown-toggle" data-toggle="dropdown"><?php echo $i18n_arr['header']['menu_solutions']; ?> <b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -162,7 +161,8 @@ require_once(get_template_directory() . '/inc/language_map.php');
                   </ul>
                 </li>
 				<li><a onclick="ga('send','event','Menu','Click','Blog');" href="<?php echo esc_url( home_url( "/blog/" . trim($current_language_option['path']) ) ); ?>"><?php echo $i18n_arr['header']['menu_blog']; ?></a></li>
-              </ul>
+				<li><a onclick="ga('send','event','Menu','Click','Contact');" href="<?php echo esc_url( home_url( '/'.$current_language_option['path'].'#contact' ) ); ?>" id="cta-btn"><?php echo $i18n_arr['header']['menu_contact']; ?></a></li>
+			</ul>
             </div>
           </div>
         </div>

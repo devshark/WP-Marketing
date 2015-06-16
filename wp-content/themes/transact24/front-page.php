@@ -382,13 +382,24 @@ require(get_template_directory() . '/inc/language_map.php');?>
 
         </div>
 
-        <!--/myCarousel-->  
-        <div class="col-lg-4">
-          <div class="grey-line"></div>
-          <div class="red-line"></div>
-          <?php //include "testimonials.php"; ?>
-        </div>
-        <!--/myCarousel-->
+		<!--/myCarousel-->  
+		<div class="col-lg-4">
+			<div class="grey-line"></div>
+			<div class="red-line"></div>
+			  
+			<h2 style="text-align: left;">
+			<?php echo $page_from_our_md->getPost($_LANG)->post_title; ?>
+			</h2>
+			<div id="testimonialCarousel" class="carousel slide">
+				<!-- Carousel items -->
+				<div class="carousel-inner">	   
+				<?php echo $page_from_our_md->getPost($_LANG)->post_content; ?>
+				</div>
+				<!--/carousel-inner--> 
+			</div>
+
+		</div>
+		<!--/myCarousel-->
       </div>
 
       <div class="row dividing-line">
@@ -419,5 +430,7 @@ require(get_template_directory() . '/inc/language_map.php');?>
       </div>
 
     </div><!-- /.container -->
-
+<script>
+window.is_front = true;
+</script>
 <?php get_footer(); ?>
